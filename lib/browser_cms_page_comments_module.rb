@@ -1,1 +1,1 @@
-require 'browser_cms_news_module/routes'
+require 'browser_cms_page_comments_module/routes'

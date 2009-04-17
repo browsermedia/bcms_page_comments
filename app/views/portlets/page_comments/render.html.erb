@@ -1,0 +1,29 @@
+<% if @page %>
+  <% @page_comments.each do |page_comment| %>
+    <div id="page_comment_<%= page_comment.id %>" class="page_comment">
+      Comment by 
+      <strong><%= h(page_comment.name) %></strong>
+      on <em><%= page_comment.created_at.strftime("%A, %B %e %Y") %></em>
+      at <em><%= page_comment.created_at.strftime("%l:%M %p") %></em>
+      <br />
+      <%= h(page_comment.body).gsub(/\n/,'<br/>') %>
+    </div>
+    <hr style="margin: 10px 0"/>
+  <% end %>
+
+  <% form_for @page_comment do |f| %>
+    <%= f.hidden_field :page_id %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <br/>
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+    <br/>
+    <%= f.label :url %>
+    <%= f.text_field :url %>
+    <br/>
+    <%= f.text_area :body, :size => "80x5" %>
+    <br/>
+    <%= f.submit "Post Comment" %>
+  <% end %>
+<% end %>

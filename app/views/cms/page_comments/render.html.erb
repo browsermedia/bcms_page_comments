@@ -1,0 +1,6 @@
+<p><b>Page:</b> <%= @content_block.page.name %></p>
+<p><b>Name:</b> <%= @content_block.name %></p>
+<p><b>Email:</b> <%= @content_block.email %></p>
+<p><b>Url:</b> <%= @content_block.url %></p>
+<p><b>Body:</b> <%= h(@content_block.body).gsub(/\n/,'<br/>') %></p>
+<p><b>Ip:</b> <%= @content_block.ip %></p>
