@@ -11,19 +11,21 @@
     <hr style="margin: 10px 0"/>
   <% end %>
 
-  <% form_for @page_comment do |f| %>
-    <%= f.hidden_field :page_id %>
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-    <br/>
-    <%= f.label :email %>
-    <%= f.text_field :email %>
-    <br/>
-    <%= f.label :url %>
-    <%= f.text_field :url %>
-    <br/>
-    <%= f.text_area :body, :size => "80x5" %>
-    <br/>
-    <%= f.submit "Post Comment" %>
+  <% unless current_user.guest? %>
+      <% form_for @page_comment do |f| %>
+        <%= f.hidden_field :page_id %>
+        <%= f.label :name %>
+        <%= f.text_field :name %>
+        <br/>
+        <%= f.label :email %>
+        <%= f.text_field :email %>
+        <br/>
+        <%= f.label :url %>
+        <%= f.text_field :url %>
+        <br/>
+        <%= f.text_area :body, :size => "80x5" %>
+        <br/>
+        <%= f.submit "Post Comment" %>
+      <% end %>
   <% end %>
 <% end %>
