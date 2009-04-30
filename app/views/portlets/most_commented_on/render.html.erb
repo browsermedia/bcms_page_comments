@@ -1,0 +1,7 @@
+<h2>Most Commented On Pages</h2>
+<p>The list of pages below shows the most frequently commented on pages, in order of popularity.</p>
+<ol>
+<% @pages.each do |page| %>
+    <li><%= link_to page.name, page.path %> (<%= page.comments_count %> comments)</li>
+  <% end %>
+</ol>
