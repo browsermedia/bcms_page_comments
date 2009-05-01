@@ -10,8 +10,9 @@ To install this module, do the following:
 
 ### A. Build and install the gem from source
 This assumes you have the latest copy of the code from github on your machine.
-1. gem build browsercms_page_comments_module.gemspec
-2. sudo gem install browser_cms_page_comments_module-3.0.0.gem
+
+        gem build browsercms_page_comments_module.gemspec
+        sudo gem install browser_cms_page_comments_module-3.0.0.gem
 
 At this point, the Page Comments gem should be installed as a gem on your system, and can be added to your projects.
 
