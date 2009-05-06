@@ -1,1 +1,0 @@
-require 'browser_cms_page_comments_module/routes'

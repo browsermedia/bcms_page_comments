@@ -11,8 +11,8 @@ To install this module, do the following:
 ### A. Build and install the gem from source
 This assumes you have the latest copy of the code from github on your machine.
 
-        gem build browsercms_page_comments_module.gemspec
-        sudo gem install browser_cms_page_comments_module-3.0.0.gem
+        gem build bcms_page_comments.gemspec
+        sudo gem install bcms_page_comments-3.0.0.gem
 
 At this point, the Page Comments gem should be installed as a gem on your system, and can be added to your projects.
 
@@ -24,12 +24,12 @@ In your BrowserCMS application, do the following steps.
 		config.gem 'browsercms'
 
 		# Add this next line after the browsercms gem
-		config.gem "browser_cms_page_comments_module"
+		config.gem "bcms_page_comments"
 
 #### 2. Edit the routes.rb file
 
 		# Add this route. It must be before the core browser_cms route.
-		map.routes_for_browser_cms_page_comments_module
+		map.routes_for_bcms_page_comments
 		map.routes_for_browser_cms
 
 #### 3. Install the new module code

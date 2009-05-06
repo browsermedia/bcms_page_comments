@@ -1,5 +1,5 @@
 module Cms::Routes
-  def routes_for_browser_cms_page_comments_module
+  def routes_for_bcms_page_comments
     
     page_comments "/page_comments", 
       :controller => "page_comments", 

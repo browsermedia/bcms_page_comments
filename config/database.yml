@@ -2,7 +2,7 @@ development:
   adapter: mysql
   encoding: utf8
   reconnect: false
-  database: page_comments_module_development
+  database: bcms_page_comments_development
   pool: 5
   username: root
   password:
@@ -15,7 +15,7 @@ test:
   adapter: mysql
   encoding: utf8
   reconnect: false
-  database: page_comments_module_test
+  database: bcms_page_comments_test
   pool: 5
   username: root
   password:

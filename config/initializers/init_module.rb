@@ -1,1 +1,1 @@
-require File.join(File.dirname(__FILE__), "..", "..", "lib", "browser_cms_page_comments_module")
+require File.join(File.dirname(__FILE__), "..", "..", "lib", "bcms_page_comments")
