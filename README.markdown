@@ -12,7 +12,7 @@ To install this module, do the following:
 This assumes you have the latest copy of the code from github on your machine.
 
         gem build bcms_page_comments.gemspec
-        sudo gem install bcms_page_comments-3.0.0.gem
+        sudo gem install bcms_page_comments-1.0.0.gem
 
 At this point, the Page Comments gem should be installed as a gem on your system, and can be added to your projects.
 
