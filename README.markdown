@@ -6,45 +6,22 @@ A simple comments module that can be embedded into pages to allow users to leave
 * A comments portlet, which can be added to any template, and will record comments for that page.
 
 ## Installation
-To install this module, do the following:
 
-### A. Build and install the gem from source
-This assumes you have the latest copy of the code from github on your machine.
+The Page comments module installs like most other BrowserCMS modules (http://guides.browsercms.org/installing_modules.html)
 
-        rake install
+### 1. Install the module 
+    
+    $ rails g cms:install bcms_page_comments
+    
+### 2. Run the following commands
+  
+    $ rake db:migrate
+  	$ rake db:seed
 
-At this point, the Page Comments gem should be installed as a gem on your system, and can be added to your projects.
+For projects with existing databases, you may need to comment out other lines in db/seeds.rb so only the blog seed data runs.
 
-### B. Adding the Page Comments to your project
-In your BrowserCMS application, do the following steps.
+### 3. Create a Comments portlet and embed into your templates
 
-#### 1. Edit the confing/environment.rb file
-
-		config.gem 'browsercms'
-
-		# Add this next line after the browsercms gem
-		config.gem "bcms_page_comments"
-
-#### 2. Edit the routes.rb file
-
-		# Add this route. It must be before the core browser_cms route.
-		map.routes_for_bcms_page_comments
-		map.routes_for_browser_cms
-
-#### 3. Install the new module code
-From the root directory of your cms project, run:
-
-		script/generate browser_cms
-
-This will copy all the necessary views and migrations from the gems into your local project. You should messages checking to see if files already exist or were created.
-
-#### 4. Run migrations and start the server
-Modules will often add new data types, like content blocks, so you need to run the migrations to add them to your project.
-
-		rake db:migrate
-		script/server
-
-#### 5. Create a Comments portlet and embed into your templates
 * Open your browser to localhost:3000/cms/portlets and login 
 * Click 'Add New Content', and select 'Page Comments Portlet'
 * Set the name to 'Page Comments' and click save.
