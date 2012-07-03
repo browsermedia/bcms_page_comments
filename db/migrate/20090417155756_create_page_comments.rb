@@ -1,5 +1,5 @@
 class CreatePageComments < ActiveRecord::Migration
-  def self.up
+  def change
     create_versioned_table :page_comments do |t|
       t.belongs_to :page 
       t.string :name 
@@ -8,14 +8,5 @@ class CreatePageComments < ActiveRecord::Migration
       t.text :body 
       t.string :ip 
     end
-    
-    
-    ContentType.create!(:name => "PageComment", :group_name => "Comments")
-  end
-
-  def self.down
-    ContentType.delete_all(['name = ?', 'PageComment'])
-    drop_table :page_comment_versions
-    drop_table :page_comments
   end
 end

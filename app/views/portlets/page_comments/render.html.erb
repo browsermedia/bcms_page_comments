@@ -10,9 +10,8 @@
     </div>
     <hr style="margin: 10px 0"/>
   <% end %>
-
   <% unless current_user.guest? %>
-      <% form_for @page_comment do |f| %>
+      <%= form_for @page_comment do |f| %>
         <%= f.hidden_field :page_id %>
         <%= f.label :name %>
         <%= f.text_field :name %>

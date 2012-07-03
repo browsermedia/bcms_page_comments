@@ -1,0 +1,5 @@
+<%= f.cms_drop_down :page_id, Cms::Page.all(:order => "path").map{|p| ["#{p.path} (#{p.name})", p.id]}%>
+<%= f.cms_text_field :name %>
+<%= f.cms_text_field :email %>
+<%= f.cms_text_field :url %>
+<%= f.cms_text_area :body %>
