@@ -15,7 +15,7 @@ class BcmsPageComments::InstallGenerator < Cms::ModuleInstallation
   end
   
   def add_routes
-    mount_engine(BcmsPageComments)
+    route 'mount_bcms_page_comments'
   end
     
 end
